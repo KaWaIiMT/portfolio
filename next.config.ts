@@ -1,12 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  distDir: "docs",
-  basePath: "/portfolio",
-  images: {
-    unoptimized: true,
-  },
+  /* Vercel auto-deploys the Next.js app — no static export needed */
 };
 
 export default nextConfig;

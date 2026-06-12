@@ -1,2 +1,7 @@
 :HL["/portfolio/_next/static/chunks/3gkfo112tp-lg.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"_NBhp8GYT3z2ghNwAxDqz"}
+:HL["/images/projects/code-ascension/thumb.png","image"]
+:HL["/images/projects/plague-city/thumb.png","image"]
+:HL["/images/projects/vismoke/thumb.png","image"]
+:HL["/images/projects/silver-star/thumb.png","image"]
+:HL["/images/projects/dove-simulator/thumb.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"GcPl-lAeGvIh_JV56Me0O"}

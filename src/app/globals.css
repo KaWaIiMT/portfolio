@@ -1,26 +1,108 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: #000000;
+  --color-foreground: #ffffff;
+  --color-muted: #888888;
+  --color-muted-dim: rgba(255, 255, 255, 0.35);
+  --color-glass-bg: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #ffffff;
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-card-hover: rgba(255, 255, 255, 0.06);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-cn: var(--font-noto-sc), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --tracking-ultra: -0.03em;
+  --leading-hero: 0.95;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+/* Scrollbar — minimal, dark */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* --- Balatro Card Animations --- */
+
+/* Idle floating bob */
+@keyframes card-bob {
+  0%, 100% {
+    translate: 0 0;
+  }
+  25% {
+    translate: 0 -6px;
+  }
+  50% {
+    translate: 0 -1px;
+  }
+  75% {
+    translate: 0 -8px;
+  }
+}
+
+/* Idle gentle wiggle */
+@keyframes card-wiggle {
+  0%, 100% {
+    rotate: 0deg;
+  }
+  25% {
+    rotate: 0.3deg;
+  }
+  75% {
+    rotate: -0.3deg;
+  }
+}
+
+/* Shine sweep on hover */
+@keyframes shine-sweep {
+  0% {
+    background-position: 200% 200%;
+  }
+  100% {
+    background-position: -200% -200%;
+  }
+}
+
+/* Snap-reveal for hidden elements */
+@keyframes reveal-up {
+  0% {
+    translate: 0 12px;
+    opacity: 0;
+  }
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/* Subtle pulse for badge */
+@keyframes badge-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+  50% {
+    box-shadow: 0 0 8px 1px rgba(255,255,255,0.08);
+  }
 }
